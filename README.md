@@ -12,3 +12,10 @@ $>UPDATE mysql.user SET authentication_string = PASSWORD('MrSi3u@#!'), password_
 --------MySQL 5.7.5 and earlier
 $>SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MrSi3u@#!');
 $>FLUSH PRIVILEGES;
+```
+### Scan Shell
+
+```
+$>bash scanshell.sh  -v -single /home/ -time all
+$>ngrep "^POST" | grep -i --color "host.+conn"
+```
