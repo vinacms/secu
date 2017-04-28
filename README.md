@@ -1,6 +1,6 @@
 # secu
-@author: NguyenTuanSieu
-@email: dev.phpjs@gmail.com
+- @author: NguyenTuanSieu
+- @email: dev.phpjs@gmail.com
 
 ### Reset password root
 ```
