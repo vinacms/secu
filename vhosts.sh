@@ -43,19 +43,21 @@ if [ "$ACTION" == 'create' ]; then
 		exit 1;
 	fi
 	
-	if ! echo "<VirtualHost *:80>
-		ServerName example.com
-		ServerAlias www.example.com
-		DocumentRoot /var/www/html
-		<Directory /var/www/html/kenhtinnhadat>
+	if ! echo "
+	<VirtualHost *:80>
+		ServerName $DOMAIN
+		ServerAlias www.$DOMAIN
+		DocumentRoot $DIR_PUBLIC
+		<Directory $DIR_PUBLIC>
 			AllowOverride All
 			Order allow,deny
 			Allow from all
 			Require all granted
 		</Directory>
-		ErrorLog ${APACHE_LOG_DIR}/example_error.log
-		CustomLog ${APACHE_LOG_DIR}/example_access.log combined
-	</VirtualHost>" > $HOSTS_EXISTS
+		ErrorLog ${APACHE_LOG_DIR}/$USERNAME_error.log
+		CustomLog ${APACHE_LOG_DIR}/$USERNAME_access.log combined
+	</VirtualHost>
+	" > $HOSTS_EXISTS
 	then
 		echo -e $"Error!!!"
 		exit 1;
