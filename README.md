@@ -19,3 +19,17 @@ $>FLUSH PRIVILEGES;
 $>bash scanshell.sh  -v -single /home/ -time all
 $>ngrep "^POST" | grep -i --color "host.+conn"
 ```
+
+### Setup Apache2, PHP, MySQL, Composer
+
+```
+$>chmod +x setup.sh
+$>./setup.sh
+```
+
+### Create virtual host
+
+```
+$>chmod +x vhosts.sh
+$>sudo ./vhosts.sh create bds3mien.com bds3mien
+```
