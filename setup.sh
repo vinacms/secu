@@ -5,7 +5,6 @@ DBHOST=localhost
 DBNAME=cms
 DBUSER=root
 DBPASSWD=root
-GITHUB_TOKEN=381936937f91ec41f6d0bc1bd1215a340017aa7e
 
 echo -e "\n--- Install MySQL specific packages and settings ---\n"
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $DBPASSWD"
