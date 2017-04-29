@@ -33,3 +33,8 @@ $>./setup.sh
 $>chmod +x vhosts.sh
 $>sudo ./vhosts.sh create bds3mien.com bds3mien
 ```
+### Create hosts domain in windows
+
+```
+$>./hosts.bat domain.dev
+```
