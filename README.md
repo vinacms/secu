@@ -38,3 +38,10 @@ $>sudo ./vhosts.sh create bds3mien.com bds3mien
 ```
 $>./hosts.bat domain.dev
 ```
+### Turn on or off Hyper-V
+
+```
+#Off
+$>bcdedit /set hypervisorlaunchtype off
+#On
+$>bcdedit /set hypervisorlaunchtype auto
