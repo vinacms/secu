@@ -45,3 +45,10 @@ $>./hosts.bat domain.dev
 $>bcdedit /set hypervisorlaunchtype off
 #On
 $>bcdedit /set hypervisorlaunchtype auto
+```
+
+### Find top 10 large files
+
+```
+$>for i in G M K; do du -ah | grep [0-9]$i | sort -nr -k 1; done | head -n 11
+```
