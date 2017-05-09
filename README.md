@@ -52,3 +52,11 @@ $>bcdedit /set hypervisorlaunchtype auto
 ```
 $>for i in G M K; do du -ah | grep [0-9]$i | sort -nr -k 1; done | head -n 11
 ```
+
+### Display error PHP
+
+```php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+```
