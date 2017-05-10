@@ -60,3 +60,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ```
+
+### Disabled views vendors
+
+```.htaccess
+Require all denied
+Order deny,allow
+Deny from all
+```
+
+### Disable execute PHP
+
+```.htaccess
+<IfModule mod_php5.c>
+  php_flag engine off
+</IfModule>
+<Files *.php>
+deny from all
+</Files>
+```
