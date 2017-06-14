@@ -79,3 +79,13 @@ Deny from all
 deny from all
 </Files>
 ```
+
+### Install Apache2
+
+```bash
+httpd.exe -k install
+httpd.exe -k uninstall
+httpd.exe -k start
+httpd.exe -k stop
+httpd.exe -k restart
+```
